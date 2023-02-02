@@ -4,8 +4,8 @@ from .models import TrafficLight
 
 # Register your models here.
 
-@admin.register
+@admin.register(TrafficLight)
 class AdminTrafficLight(admin.ModelAdmin):
-    model = TrafficLight
 
+    fields = ('text', 'islighton')
     list_display = ('text', 'islighton')
